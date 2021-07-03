@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="482e6d66b5604a1ea0938843e5651b03" Name="Diagram1" >
+        <EntityTypeShape EntityType="db_musikr_andreModel.Banda" Width="1.5" PointX="3.75" PointY="5.5" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.BandaFollow" Width="1.5" PointX="6" PointY="16" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.BandaGeneroMusical" Width="1.5" PointX="9" PointY="16.625" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.BandaUsuario" Width="1.5" PointX="3" PointY="12.875" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.GeneroMusical" Width="1.5" PointX="0.75" PointY="18.125" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.Instrumento" Width="1.5" PointX="6.75" PointY="19.125" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.Publicacao" Width="1.5" PointX="6" PointY="8.5" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.PublicacaoLike" Width="1.5" PointX="8.25" PointY="9.5" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.Usuario" Width="1.5" PointX="0.75" PointY="11.375" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.UsuarioFollow" Width="1.5" PointX="3" PointY="34.75" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.UsuarioGeneroMusical" Width="1.5" PointX="3" PointY="16" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.UsuarioInstrumento" Width="1.5" PointX="6" PointY="13" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.Vaga" Width="1.5" PointX="9" PointY="12.375" />
+        <EntityTypeShape EntityType="db_musikr_andreModel.VagaCandidato" Width="1.5" PointX="3" PointY="10" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__BandaFoll__Banda__5535A963" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__BandaGene__Banda__38996AB5" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__BandaUsua__Banda__3E52440B" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__Vaga__BandaFK__59FA5E80" />
+        <AssociationConnector Association="db_musikr_andreModel.FK_Publicacao_Banda" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__BandaFoll__Usuar__5441852A" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__BandaGene__Gener__398D8EEE" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__BandaUsua__Usuar__3F466844" />
+        <AssociationConnector Association="db_musikr_andreModel.FK_UsuarioGeneroMusical_GeneroMusical" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__Vaga__Instrument__5AEE82B9" />
+        <AssociationConnector Association="db_musikr_andreModel.FK_UsuarioInstrumento_Instrumento" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__Publicaca__Publi__48CFD27E" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__Publicaca__Usuar__2D27B809" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__Publicaca__Usuar__49C3F6B7" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__UsuarioFo__Usuar__4E88ABD4" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__UsuarioFo__Usuar__4F7CD00D" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__VagaCandi__Usuar__66603565" />
+        <AssociationConnector Association="db_musikr_andreModel.FK_UsuarioGeneroMusical_Usuario" />
+        <AssociationConnector Association="db_musikr_andreModel.FK_UsuarioInstrumento_Usuario" />
+        <AssociationConnector Association="db_musikr_andreModel.FK_Vaga_Usuario" />
+        <AssociationConnector Association="db_musikr_andreModel.FK__VagaCandi__VagaF__656C112C" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

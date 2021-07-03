@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E6D1FAC-7D67-49E4-B228-828A4796130B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MusikrApi.Core</RootNamespace>
+    <AssemblyName>MusikrApi.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constantes.cs" />
+    <Compile Include="Database\Banda.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BandaFollow.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BandaGeneroMusical.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BandaUsuario.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DBMusikr.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBMusikr.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DBMusikr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DBMusikr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBMusikr.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GeneroMusical.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Instrumento.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Publicacao.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PublicacaoLike.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_helpdiagrams_Result.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sysdiagrams.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Usuario.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UsuarioFollow.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UsuarioGeneroMusical.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UsuarioInstrumento.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Vaga.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VagaCandidato.cs">
+      <DependentUpon>DBMusikr.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dto\BandaAdicionarIntegranteDto.cs" />
+    <Compile Include="Dto\VagaDto.cs" />
+    <Compile Include="Dto\DetalhePublicacaoDto.cs" />
+    <Compile Include="Dto\PerfilBandaDetalheDto.cs" />
+    <Compile Include="Dto\BuscaNomeDto.cs" />
+    <Compile Include="Dto\PerfilDetalheDto.cs" />
+    <Compile Include="Dto\BandaIntegranteDto.cs" />
+    <Compile Include="Dto\BandaDetalheDto.cs" />
+    <Compile Include="Dto\BandaDto.cs" />
+    <Compile Include="Dto\FirstAccessDto.cs" />
+    <Compile Include="Dto\PublicacaoDto.cs" />
+    <Compile Include="Dto\EditarPerfilDto.cs" />
+    <Compile Include="Dto\UsuarioDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Repositorio\Impl\RepositorioVaga.cs" />
+    <Compile Include="Repositorio\Impl\RepositorioBanda.cs" />
+    <Compile Include="Repositorio\Impl\RepositorioInstrumento.cs" />
+    <Compile Include="Repositorio\Impl\RepositorioGeneroMusical.cs" />
+    <Compile Include="Repositorio\Impl\RepositorioPublicacao.cs" />
+    <Compile Include="Repositorio\IRepositorioVaga.cs" />
+    <Compile Include="Repositorio\IRepositorioBanda.cs" />
+    <Compile Include="Repositorio\IRepositorioInstrumento.cs" />
+    <Compile Include="Repositorio\IRepositorioGeneroMusical.cs" />
+    <Compile Include="Repositorio\IRepositorioPublicacao.cs" />
+    <Compile Include="Services\Impl\ServiceEmail.cs" />
+    <Compile Include="Services\Impl\ServiceEncrypt.cs" />
+    <Compile Include="Services\IServiceEmail.cs" />
+    <Compile Include="Services\IServiceEncrypt.cs" />
+    <Compile Include="Repositorio\Impl\RepositorioUsuario.cs" />
+    <Compile Include="Repositorio\IRepositorioUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Database\DBMusikr.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBMusikr.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Database\DBMusikr.edmx.diagram">
+      <DependentUpon>DBMusikr.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\DBMusikr.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBMusikr.edmx</DependentUpon>
+      <LastGenOutput>DBMusikr.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\DBMusikr.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBMusikr.edmx</DependentUpon>
+      <LastGenOutput>DBMusikr.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
